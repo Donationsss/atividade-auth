@@ -22,6 +22,7 @@
     justify-content: center;
     background-color: #ffffff;
     padding: 65px;
+    width: 400px;
     border-radius: 12px;
     box-shadow: 0 8px 12px rgba(0, 0, 0, 0.1);
 }
@@ -50,7 +51,13 @@ h1 {
 #lembre-de-mim {
     display: flex;
     align-items: center;
-    margin-right: 160px;
+    margin-right: 250px;
+    width: 50px;
+    
+}
+
+#div-check {
+    
 }
 
 #issoai {
@@ -61,4 +68,22 @@ a {
     text-decoration: none;
     color: #4580c0;
     font-size: 0.85rem;
+}
+
+#name {
+    width: 85%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #333;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+#password {
+    width: 85%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #333;
+    border-radius: 5px;
+    font-size: 1rem;
 }
