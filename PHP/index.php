@@ -19,7 +19,7 @@
             <input type="checkbox" id="lembre-de-mim" checked>
             <div class="div-check">
                 <label id="issoai">Lembre de mim</label>
-                <a href="../HTML/email.html" target="_blank">Esqueci minha senha</a><br><br>
+                <a href="../PHP/email.php" target="_blank">Esqueci minha senha</a><br><br>
             </div>
             <button id="login-button">Login</button><br>
         </div>
