@@ -13,7 +13,7 @@
     <div class="container">
         <div class="campos-login">
             <h1>Registro</h1><br>
-            <form action="../CONTROLLER/CadastroController.php" method="POST"></form>
+            <form action="../../CONTROLLER/CadastroController.php" method="POST">
             <label for="nomedeusuario">Nome de usuário</label>
             <input type="text" id="name" name="nomedeusuario" placeholder="Digite seu usuário" required><br>
             <label for="email">Email</label>
@@ -24,7 +24,7 @@
             <input type="password" id="password" name="senha" placeholder="Digite sua senha" required><br>
             <label for="confirmarsenha">Confirmar Senha</label>
             <input type="password" id="confirm-password" name="confirmarsenha" placeholder="Confirme sua senha" required><br>
-            <button id="login-button" onclick="registrar()">Registrar</button><br>
+            <button type="submit" id="login-button">Registrar</button><br>
             </form>
         </div>
     </div>
