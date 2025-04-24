@@ -1,0 +1,81 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+    color: #333;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-color: #333;
+}
+
+.campos-login {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #ffffff;
+    padding: 65px;
+    width: 400px;
+    border-radius: 12px;
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    font-size: 2.5rem;
+    color: #333;
+}
+
+#login-button {
+    background-color: #4580c0;
+    color: #fff;
+    width: 85%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #333;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+#login-button:hover {
+    background-color: #3a6f9e;
+}
+
+#lembre-de-mim {
+    display: flex;
+    align-items: center;
+    margin-right: 250px;
+    width: 50px;
+}
+
+.div-check {
+    position: relative;
+    bottom: 15px;
+}
+
+
+#issoai {
+    font-size: 0.85rem;
+}
+
+a {
+    text-decoration: none;
+    color: #4580c0;
+    font-size: 0.85rem;
+}
+
+#name, #password, #telefone, #email, #confirm-password {
+    width: 85%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #333;
+    border-radius: 5px;
+    font-size: 1rem;
+}
