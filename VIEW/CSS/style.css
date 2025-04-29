@@ -71,16 +71,7 @@ a {
     font-size: 0.85rem;
 }
 
-#name {
-    width: 85%;
-    padding: 10px;
-    margin: 10px 0;
-    border: 1px solid #333;
-    border-radius: 5px;
-    font-size: 1rem;
-}
-
-#password {
+#name, #password, #telefone, #e-mail ,#confirm-password {
     width: 85%;
     padding: 10px;
     margin: 10px 0;
