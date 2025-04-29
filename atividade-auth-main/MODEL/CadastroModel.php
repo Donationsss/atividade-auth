@@ -1,25 +1,30 @@
 <?php
-    require '../SERVICE/conexao.php';
-
-    function register($nomedeusuario, $email, $telefone, $senha){
-        $conn = new usePDO();
-        $instance = $conn->getInstance();
-
-        $hashed_password = password_hash($senha, PASSWORD_DEFAULT);
-
-        $sql = "INSERT INTO usuario (nome_de_usuario, senha)
-        VALUES (?, ?)";
-        $stmt = $instance->prepare($sql);
-        $stmt->execute([$nomedeusuario, $hashed_password]);
-        
-
-        $idPessoa = $instance->lastInsertId();
-        $sql = "INSERT INTO pessoa (nome, email, telefone, usuario_id) VALUES (?, ?, ?, ?)";
-        $stmt = $instance->prepare($sql);
-        $stmt->execute([$nomedeusuario, $email, $telefone, $idPessoa]);
-
-        $result = $stmt->rowCount();
-
-        return $idPessoa;
-
+class Usuario
+{
+    public static function buscarEmail($pdo, $email)
+    {
+        $stmt = $pdo->prepare("SELECT * FROM usuario WHERE email = ?");
+        $stmt->execute([$email]);
+        return $stmt->fetch(PDO::FETCH_ASSOC);
     }
+
+    public static function cadastro($pdo, $nomedeusuario, $senha, $email)
+    {
+        $stmt = $pdo->prepare("INSERT INTO usuario (nome_de_usuario, senha, email) VALUES (?, ?, ?)");
+        return $stmt->execute([
+            $nomedeusuario,
+            password_hash($senha, PASSWORD_DEFAULT),
+            $email
+        ]);
+    }
+
+    public static function novaSenha($pdo, $nSenha, $email)
+    {
+        $stmt = $pdo->prepare("UPDATE usuario SET senha = ? WHERE email = ?");
+        return $stmt->execute([
+            password_hash($nSenha, PASSWORD_DEFAULT),
+            $email
+        ]);
+    }
+}
+?>
