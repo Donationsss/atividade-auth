@@ -1,8 +1,3 @@
-<?php
-if (!isset($_SESSION)) {
-    session_start();
-}
-?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -14,7 +9,7 @@ if (!isset($_SESSION)) {
 </head>
 
 <body>
-    Bem-vindo, <?php echo $_SESSION['nome']; ?>
+    Bem-vindo
 </body>
 
 </html>
