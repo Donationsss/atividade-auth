@@ -27,3 +27,24 @@ class usePDO
         }
     }
 }
+
+function diffConection() {
+
+$servidor = "localhost";
+$usuario = "root";
+$senha = "";
+$banco = "atv-auth";
+
+// Criar conexão
+$conexao = new mysqli($servidor, $usuario, $senha, $banco);
+
+// Verificar conexão
+if ($conexao->connect_error) {
+    die("Falha na conexão: " . $conexao->connect_error);
+}
+
+// Definir charset para UTF-8
+$conexao->set_charset("utf8");
+
+return $conexao;
+}

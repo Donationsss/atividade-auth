@@ -30,6 +30,7 @@
                     <a href="../PHP/email.php" target="_blank">Esqueci minha senha</a><br><br>
                 </div>
                 <a href="../PHP/registro.php">Registre-se</a>
+                <a href="../PHP/issoai.php">Dashboard</a>
                 <button type="submit" id="login-button">Login</button><br>
             </div>
         </div>

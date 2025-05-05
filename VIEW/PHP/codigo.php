@@ -14,9 +14,6 @@
                 <?php if (isset($_GET['erro'])): ?>
                     <div style="color: red;">Código inválido!</div>
                 <?php endif; ?>
-                <?php if (isset($_GET['codigo'])): ?>
-                    <div style="color: green;">Seu código é: <?= htmlspecialchars($_GET['codigo']) ?></div>
-                <?php endif; ?>
                 <label for="codigo">Qual o código enviado?</label>
                 <input type="number" id="codigo" name="codigo" placeholder="Digite o código" required><br>
                 <button type="submit" id="login-button">Enviar código</button><br>
